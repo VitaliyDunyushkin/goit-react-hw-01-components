@@ -1,0 +1,31 @@
+.statistics{
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    background-color: rgb(249, 234, 150);
+}
+
+.title{
+    text-align: center;
+    
+}
+
+.statList{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    color: white;
+    
+}
+
+.percentage{
+    font-size: 1.5rem;
+    
+}

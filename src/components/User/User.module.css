@@ -1,0 +1,42 @@
+.profile{
+    padding: 20px;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 5%;
+    background-color:antiquewhite;
+}
+
+.description{
+    padding: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border: solid 1px cadetblue;
+    border-radius: 5%;
+}
+
+.avatar{
+    background-color:cadetblue;
+    border-radius: 30%;
+}
+
+.name{
+    font-size: 2rem;
+    font-weight: 900;
+    color: blueviolet;
+}
+
+.stats{
+    display: flex;
+    justify-content:space-around;
+}
+
+.statsItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label{font-weight: 700; color:deeppink}
