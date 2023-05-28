@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './User.module.css';
+import css from './Profile.module.css';
 
-export default function User(userData) {
-  const { username, tag, location, avatar, followers, views, likes } = userData;
+export default function Profile({ userData }) {
+  const {
+    username,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+  } = userData;
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -31,11 +37,16 @@ export default function User(userData) {
   );
 }
 
-User.propTypes = {
-  avatar: PropTypes.string,
-  location: PropTypes.string,
-  tag: PropTypes.string,
-  followers: PropTypes.number,
-  viewss: PropTypes.number,
-  likes: PropTypes.number,
+Profile.propTypes = {
+  userData: PropTypes.exact({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.exact({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }),
+  }),
 };

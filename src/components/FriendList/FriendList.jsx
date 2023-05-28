@@ -22,5 +22,9 @@ export default function FriendList({ friends }) {
 }
 
 FriendListItem.propTypes = {
-  friends: PropTypes.array,
+  friends: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+    })
+  ),
 };

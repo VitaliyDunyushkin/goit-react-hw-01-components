@@ -1,4 +1,4 @@
-import User from './User';
+import Profile from './Profile';
 import userData from '../assets/user.json';
 
 import Statistics from './Statistics';
@@ -12,29 +12,13 @@ import transactions from '../assets/transactions.json';
 
 // console.dir(transactions);
 
-const {
-  avatar,
-  location,
-  tag,
-  username,
-  stats: { followers, views, likes },
-} = userData;
-
-const title = 'Upload stats';
+const titleStats = 'Upload stats';
 
 export const App = () => {
   return (
     <>
-      <User
-        avatar={avatar}
-        location={location}
-        tag={tag}
-        username={username}
-        followers={followers}
-        views={views}
-        likes={likes}
-      />
-      <Statistics title={title} data={stats} />
+      <Profile userData={userData} />
+      <Statistics title={titleStats} data={stats} />
       <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />
     </>
